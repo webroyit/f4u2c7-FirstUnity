@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // Move the cube
-        rb.AddForce(0, 0, 200);
+        // Time.deltaTime to fix the speed difference between the fast and slow pc
+        rb.AddForce(0, 0, 2000 * Time.deltaTime);
     }
 }
