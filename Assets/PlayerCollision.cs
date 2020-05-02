@@ -2,13 +2,17 @@
 
 public class PlayerCollision : MonoBehaviour
 {
+    public PlayerMovement movement;
+
     // Collision to access it property
     void OnCollisionEnter(Collision collisionInfo)
     {
-        // check to see what object it hits
+        // Check to see what object it hits
+        // It is better use tag instead of name to apply the logic to all object with the name of the tag
        if(collisionInfo.collider.tag == "Obstacle")
        {
-           Debug.Log("it is hited");
+           // Display the player movement if it hitted the obstacle
+           movement.enabled = false;
        }
     }
 }
