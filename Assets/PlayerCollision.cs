@@ -2,8 +2,10 @@
 
 public class PlayerCollision : MonoBehaviour
 {
-    void OnCollisionEnter()
+    // Collision to access it property
+    void OnCollisionEnter(Collision collisionInfo)
     {
-        Debug.Log("Hit Something");
+        // check to see what object it hits
+        Debug.Log(collisionInfo.collider.name);
     }
 }
