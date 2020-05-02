@@ -6,6 +6,9 @@ public class PlayerCollision : MonoBehaviour
     void OnCollisionEnter(Collision collisionInfo)
     {
         // check to see what object it hits
-        Debug.Log(collisionInfo.collider.name);
+       if(collisionInfo.collider.tag == "Obstacle")
+       {
+           Debug.Log("it is hited");
+       }
     }
 }
