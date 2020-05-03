@@ -18,16 +18,18 @@ public class PlayerMovement : MonoBehaviour
         // Time.deltaTime to fix the speed difference between the fast and slow pc
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
         
-        // listen for keyborad
+        // Listen for keyborad
         if(Input.GetKey("d"))
         {
-            // move right
-            rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0);
+            // Move right
+            // By default ForceMode is Force is which add velocity to the object based on its mass
+            // VelocityChange add velocity to the object but ignores its mass
+            rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
         if(Input.GetKey("a"))
         {
-            // move left
-            rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0);
+            // Move left
+            rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
