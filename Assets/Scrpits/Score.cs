@@ -13,6 +13,7 @@ public class Score : MonoBehaviour
     {
         // Player score based on the value of the z-axis
         // ToString() convert the float into string
-        scoreText.text = player.position.z.ToString();
+        // "0" inside ToString() to format the score to a whole number
+        scoreText.text = player.position.z.ToString("0");
     }
 }
