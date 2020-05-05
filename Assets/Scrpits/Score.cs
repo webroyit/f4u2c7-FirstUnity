@@ -12,6 +12,7 @@ public class Score : MonoBehaviour
     void Update()
     {
         // Player score based on the value of the z-axis
-        Debug.Log(player.position.z);
+        // ToString() convert the float into string
+        scoreText.text = player.position.z.ToString();
     }
 }
