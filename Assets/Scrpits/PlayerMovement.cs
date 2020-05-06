@@ -31,5 +31,13 @@ public class PlayerMovement : MonoBehaviour
             // Move left
             rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
+
+        // Check if the player fall off the edge
+        if(rb.position.y < -1f)
+        {
+            // Reference an object from other classes
+            // End the game
+            FindObjectOfType<GameManager>().EndGame();
+        }
     }
 }

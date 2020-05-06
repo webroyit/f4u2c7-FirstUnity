@@ -13,9 +13,9 @@ public class PlayerCollision : MonoBehaviour
        {
            // Display the player movement if it hitted the obstacle
            movement.enabled = false;
+           
            // Reference an object from other classes
            FindObjectOfType<GameManager>().EndGame();
-           
        }
     }
 }
