@@ -2,7 +2,7 @@
 
 public class GameManager : MonoBehaviour
 {
-   void EndGame()
+   public void EndGame()
    {
        Debug.Log("Game Over");
    }
