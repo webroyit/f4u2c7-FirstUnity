@@ -5,9 +5,12 @@ public class GameManager : MonoBehaviour
 {
     bool isGameOver = false;
     public float delayAmount = 1f;
+    public GameObject CompleteLevelUI;
 
+    // Display the level complete message to the screen
     public void CompleteLevel(){
-        Debug.Log("You win");
+        // Show the popup UI to the screen
+        CompleteLevelUI.SetActive(true);
     }
 
     // pubic to allow other files to access this function
