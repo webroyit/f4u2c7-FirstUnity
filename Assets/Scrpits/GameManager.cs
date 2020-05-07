@@ -6,6 +6,10 @@ public class GameManager : MonoBehaviour
     bool isGameOver = false;
     public float delayAmount = 1f;
 
+    public void CompleteLevel(){
+        Debug.Log("You win");
+    }
+
     // pubic to allow other files to access this function
     public void EndGame()
     {
